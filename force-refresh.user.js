@@ -2,16 +2,14 @@
 // @id             iitc-plugin-force-refresh
 // @name           IITC plugin: force refresh
 // @category       Tweaks
-// @version        0.1.0.20170430.123533
-// @description    Reload intel data without refreshing the page.
-// @include        https://*.ingress.com/intel*
-// @include        http://*.ingress.com/intel*
-// @match          https://*.ingress.com/intel*
-// @match          http://*.ingress.com/intel*
-// @include        https://*.ingress.com/mission/*
-// @include        http://*.ingress.com/mission/*
-// @match          https://*.ingress.com/mission/*
-// @match          http://*.ingress.com/mission/*
+// @version 0.1.1
+// @namespace	https://github.com/clavelm/iitc-plugins-refresh
+// @downloadURL	https://github.com/clavelm/iitc-plugins-refresh/raw/main/force-refresh.user.js
+// @homepageURL	https://github.com/clavelm/iitc-plugins-refresh
+// @description Reload intel data without refreshing the page.
+// @author https://github.com/balthild
+// @include		https://intel.ingress.com/*
+// @match		https://intel.ingress.com/*
 // @grant          none
 // ==/UserScript==
 
@@ -36,7 +34,7 @@ var setup = function() {
     var toolbar = L.DomUtil.create('div', 'leaflet-bar');
     var button = L.DomUtil.create('a', 'leaflet-refresh');
 
-    button.innerText = '刷';
+    button.innerText = 'Refresh';
     button.onclick = function() {
         idleReset();
         window.mapDataRequest.cache = new DataCache();
