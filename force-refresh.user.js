@@ -2,7 +2,7 @@
 // @id             iitc-plugin-force-refresh
 // @name           IITC plugin: force refresh
 // @category       Tweaks
-// @version 0.1.2
+// @version 0.1.3
 // @namespace	https://github.com/clavelm/iitc-plugins-refresh
 // @downloadURL	https://github.com/clavelm/iitc-plugins-refresh/raw/main/force-refresh.user.js
 // @homepageURL	https://github.com/clavelm/iitc-plugins-refresh
@@ -17,14 +17,6 @@
 function wrapper(plugin_info) {
 // ensure plugin framework is there, even if iitc is not yet loaded
 if(typeof window.plugin !== 'function') window.plugin = function() {};
-
-//PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
-//(leaving them in place might break the 'About IITC' page or break update checks)
-plugin_info.buildName = 'iitc-test';
-plugin_info.dateTimeVersion = '20170430.123533';
-plugin_info.pluginId = 'force-refresh';
-//END PLUGIN AUTHORS NOTE
-
 
 
 // PLUGIN START ////////////////////////////////////////////////////////
